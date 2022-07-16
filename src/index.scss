@@ -2,8 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+// Variables
+:root {
+    --header-height: 120px;
+    --max-width: 1200px;
+
+    --primary-color: #ee4d2d;
+    --text-color: #222222;
+
+    --font-family: "Helvatica", sans-serif;
+}
+
 @layer base {
     body {
-        font-family: "Montserrat", sans-serif;
+        font-family: var(--font-family);
+    }
+}
+
+@layer components {
+    .nav__item {
+        @apply p-2;
+
+        & > a,
+        & > span {
+            @apply flex items-center;
+
+            &:hover {
+                @apply text-[#ffffffb3];
+                cursor: pointer;
+            }
+        }
+    }
+    .nav__icon {
+        @apply text-[18px] pr-2 cursor-pointer;
     }
 }

@@ -7,7 +7,7 @@ import "./App.scss";
 function App() {
     return (
         <Router>
-            <div className="max-w-[1200px] mx-auto">
+            <div className="">
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;

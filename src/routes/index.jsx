@@ -1,30 +1,26 @@
 import configs from "~/configs";
-import AuthLayout from "~/layouts/AuthLayout";
-import MainLayout from "~/layouts/MainLayout";
-import Cart from "~/pages/Cart/Cart";
-import Home from "~/pages/Home/Home";
-import Login from "~/pages/Login/Login";
-import NotFound from "~/pages/NotFound/NotFound";
+import { AuthLayout, MainLayout } from "~/layouts";
+import { CartPage, HomePage, LoginPage, NotFoundPage } from "~/pages";
 
 const publicRoutes = [
     {
         path: configs.routes.home,
-        component: Home,
+        component: HomePage,
         layout: MainLayout,
     },
     {
         path: configs.routes.cart,
-        component: Cart,
+        component: CartPage,
     },
 
     {
         path: configs.routes.login,
-        component: Login,
+        component: LoginPage,
         layout: AuthLayout,
     },
     {
         path: configs.routes.not_found,
-        component: NotFound,
+        component: NotFoundPage,
         layout: null,
     },
 ];

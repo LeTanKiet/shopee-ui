@@ -1,11 +1,10 @@
-import Footer from "~/components/Footer/Footer";
-import Header from "~/components/Header/Header";
+import { Footer, Header } from "~/components";
 
 const MainLayout = ({ children }) => {
     return (
         <div>
             <Header />
-            {children}
+            <div className="max-w-max_width mx-auto">{children}</div>
             <Footer />
         </div>
     );
